@@ -1,0 +1,8 @@
+<p>Book title is: <%= @book.title %></p>
+<p>Book author is: <%= @book.author %></p>
+<% if @book.cover.present? %>
+  <p>Book cover is: </p>
+  <br>
+  <%= image_tag @book.cover %>
+<% end %>
+<p><%= link_to "Back", books_path %></p>

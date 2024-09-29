@@ -1,0 +1,11 @@
+
+<h1>Perpustakaan</h1>
+<p>Tempat peminjaman buku</p>
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.title, book %> adalah buku yang ditulis oleh <%= book.author %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Tambah Buku", new_book_path %>
